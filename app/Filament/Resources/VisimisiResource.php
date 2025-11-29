@@ -1,0 +1,97 @@
+<?php
+
+namespace App\Filament\Resources;
+
+use App\Filament\Resources\VisimisiResource\Pages;
+use App\Filament\Resources\VisimisiResource\RelationManagers;
+use App\Models\Visimisi;
+use Filament\Forms;
+use Filament\Forms\Form;
+use Filament\Resources\Resource;
+use Filament\Tables;
+use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\SoftDeletingScope;
+use AmidEsfahani\FilamentTinyEditor\TinyEditor;
+
+class VisimisiResource extends Resource
+{
+    protected static ?string $model = Visimisi::class;
+
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+
+    public static function form(Form $form): Form
+    {
+        return $form
+            ->schema([
+                TinyEditor::make('visi')
+                    ->required()
+                    ->columnSpanFull(),
+                TinyEditor::make('misi')
+                    ->required()
+                    ->columnSpanFull(),
+                Forms\Components\FileUpload::make('image')
+                    ->image()
+                    ->multiple()
+                    ->required()
+                    ->minFiles(3)
+                    ->maxFiles(3)
+                    ->columnSpanFull(),
+            ]);
+    }
+
+    public static function table(Table $table): Table
+    {
+        return $table
+            ->columns([
+                Tables\Columns\TextColumn::make('visi')
+                    ->limit(50) // Batasi panjang teks agar tidak terlalu panjang di tabel
+                    ->searchable()
+                    ->html(),
+                Tables\Columns\TextColumn::make('misi')
+                    ->limit(50)
+                    ->searchable()
+                    ->html(),
+                Tables\Columns\ImageColumn::make('image')
+                    ->label('Dokumentasi') // Beri label yang lebih jelas
+                    ->stacked() // Tampilkan gambar secara bertumpuk jika ada banyak
+                    ->limit(3) // Batasi tampilan hanya 3 gambar di tabel
+                    ->size(40), // Ukuran gambar yang ditampilkan
+                Tables\Columns\TextColumn::make('created_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('updated_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+            ])
+            ->filters([
+                //
+            ])
+            ->actions([
+                Tables\Actions\EditAction::make(),
+            ])
+            ->bulkActions([
+                Tables\Actions\BulkActionGroup::make([
+                    Tables\Actions\DeleteBulkAction::make(),
+                ]),
+            ]);
+    }
+
+    public static function getRelations(): array
+    {
+        return [
+            //
+        ];
+    }
+
+    public static function getPages(): array
+    {
+        return [
+            'index' => Pages\ListVisimisis::route('/'),
+            'create' => Pages\CreateVisimisi::route('/create'),
+            'edit' => Pages\EditVisimisi::route('/{record}/edit'),
+        ];
+    }
+}
