@@ -10,7 +10,7 @@ class Aboutme extends Model
 
     protected $guarded = [];
 
-    protected $cast = [
+    protected $casts = [
         'image' => 'array',
     ];
 }

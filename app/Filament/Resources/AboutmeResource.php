@@ -12,6 +12,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use AmidEsfahani\FilamentTinyEditor\TinyEditor;
 
 class AboutmeResource extends Resource
 {
@@ -23,11 +24,15 @@ class AboutmeResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Textarea::make('content')
+                TinyEditor::make('content')
                     ->required()
                     ->columnSpanFull(),
-                Forms\Components\Textarea::make('image')
+                Forms\Components\FileUpload::make('image')
+                    ->image()
+                    ->multiple()
                     ->required()
+                    ->minFiles(3)
+                    ->maxFiles(3)
                     ->columnSpanFull(),
             ]);
     }
@@ -36,6 +41,10 @@ class AboutmeResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('content')
+                    ->searchable()
+                    ->html(),
+                Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
