@@ -13,6 +13,7 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
+
 class StudentResource extends Resource
 {
     protected static ?string $model = Student::class;
@@ -39,7 +40,7 @@ class StudentResource extends Resource
                 Forms\Components\TextInput::make('jalur')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\Textarea::make('image')
+                Forms\Components\FileUpload::make('image')
                     ->required()
                     ->columnSpanFull(),
                 Forms\Components\TextInput::make('programstudi_1')
@@ -69,6 +70,7 @@ class StudentResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('programstudi_2')
                     ->searchable(),
+                Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

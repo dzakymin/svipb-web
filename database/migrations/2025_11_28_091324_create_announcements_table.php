@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('announcements', function (Blueprint $table) {
             $table->id();
             $table->string('title', 255);
+            $table->string('slug')->unique();
             $table->text('content');
             $table->foreignId('users_id')->constrained('users')->onDelete('cascade');
             $table->timestamps();

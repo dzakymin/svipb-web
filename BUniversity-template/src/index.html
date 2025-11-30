@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B-University</title>
+
+    <link rel="stylesheet" href="output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <header class="w-full fixed top-0 bg-white z-50">
+      <nav class="container flex justify-between py-5 items-center">
+        <div>
+          <a href="index.html">
+            <img
+              src="../assets/images/B-Uni.png"
+              height="60"
+              class="max-h-[60px]"
+              alt=""
+            />
+          </a>
+        </div>
+        <ul class="md:flex items-center gap-9 list-none font-montserrat hidden">
+          <li class="relative h-full flex items-center group">
+            <div
+              class="flex items-center gap-1.5 x-dropdown-button cursor-pointer peer"
+            >
+              <span class="font-semibold">Tentang Kami</span>
+              <i
+                class="bi bi-chevron-down group-hover:rotate-180 transition-all"
+              ></i>
+            </div>
+            <div
+              class="hidden peer-hover:block hover:block group-hover:block absolute rounded-xl overflow-hidden top-full w-fit shadow-xl"
+            >
+              <div class="pt-12">
+                <ul class="bg-white list-disc text-nowrap pl-8 p-3 rounded-xl">
+                  <li>
+                    <a href="sejarah.html" class="w-full block pl-2 pr-8 py-1"
+                      >Sejarah</a
+                    >
+                  </li>
+                  <li>
+                    <a href="visimisi.html" class="w-full block pl-2 pr-8 py-1"
+                      >Visi & Misi</a
+                    >
+                  </li>
+                  <li>
+                    <a href="sambutan.html" class="w-full block pl-2 pr-8 py-1"
+                      >Sambutan Rektor</a
+                    >
+                  </li>
+                  <li>
+                    <a href="fasilitas.html" class="w-full block pl-2 pr-8 py-1"
+                      >Fasilitas</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="sdm.html" class="font-semibold">SDM</a>
+          </li>
+          <li class="relative h-full flex items-center group">
+            <div
+              class="flex items-center gap-1.5 x-dropdown-button cursor-pointer peer"
+            >
+              <span class="font-semibold">Akademik</span>
+              <i
+                class="bi bi-chevron-down group-hover:rotate-180 transition-all"
+              ></i>
+            </div>
+            <div
+              class="hidden shadow-xl rounded-xl overflow-hidden peer-hover:block hover:block group-hover:block absolute top-full w-fit -translate-x-1/2"
+            >
+              <div class="pt-12">
+                <div class="bg-white flex gap-4 px-6 py-3 rounded-xl">
+                  <div class="px-4 flex-1">
+                    <span class="block h-10 mb-4 font-semibold text-nowrap"
+                      >ILMU KESEHATAN</span
+                    >
+                    <ul class="list-disc space-y-1 text-nowrap">
+                      <li>
+                        <a href="#" class="w-full block pl-2 pr-8 py-1"
+                          >S1 KEPERAWATAN</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="w-full block pl-2 pr-8 py-1"
+                          >S1 KEBIDANAN</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="w-full block pl-2 pr-8 py-1"
+                          >S1 FARMASI</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="w-full block pl-2 pr-8 py-1"
+                          >S1 ADMINISTRASI RUMAH SAKIT</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="w-full block pl-2 pr-8 py-1"
+                          >D3 KEBIDANAN</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="w-full block pl-2 pr-8 py-1"
+                          >D3 FISIOTERAPI</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="w-full block pl-2 pr-8 py-1"
+                          >D3 FARMASI</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="px-4 flex-1">
+                    <span class="block h-10 mb-4 font-semibold text-nowrap"
+                      >EKONOMI DAN BISNIS</span
+                    >
+                    <ul class="list-disc space-y-1 text-nowrap">
+                      <li>
+                        <a href="#" class="w-full block pl-2 pr-8 py-1"
+                          >S1 MANAJEMEN</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="w-full block pl-2 pr-8 py-1"
+                          >S1 AKUNTANSI</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="w-full block pl-2 pr-8 py-1"
+                          >S1 EKONOMI SYARIAH</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="w-full block pl-2 pr-8 py-1"
+                          >S1 KEWIRAUSAHAAN</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="px-4 flex-1">
+                    <span class="block h-10 mb-4 font-semibold"
+                      >SAINS, TEKNOLOGI, DAN PENDIDIKAN</span
+                    >
+                    <ul class="text-nowrap space-y-1 list-disc">
+                      <li>
+                        <a href="#" class="w-full block pl-2 pr-8 py-1"
+                          >S1 PENDIDIKAN GURU SD</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="w-full block pl-2 pr-8 py-1"
+                          >S1 BIOLOGI</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="w-full block pl-2 pr-8 py-1"
+                          >S1 FISIKA</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="w-full block pl-2 pr-8 py-1"
+                          >S1 TEKNIK KOMPUTER</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="w-full block pl-2 pr-8 py-1"
+                          >S1 TEKNIK INDUSTRI</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="w-full block pl-2 pr-8 py-1"
+                          >S1 TEKNIK INFORMATIKA</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="pengumuman.html" class="font-semibold">Pengumuman</a>
+          </li>
+        </ul>
+        <div class="hidden md:flex">
+          <a
+            href="pendaftaran.html"
+            class="px-6 py-[14px] font-montserrat font-semibold text-xneutral-0 bg-primary-200 rounded-full"
+            >Pendaftaran</a
+          >
+        </div>
+
+        <!-- Mobile menu toggle -->
+        <button
+          type="button"
+          class="relative inline-flex md:hidden items-center justify-center rounded-md p-2 text-xneutral-300 hover:bg-xneutral-100 hover:text-xneutral-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span class="absolute -inset-0.5"></span>
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="block h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+          <svg
+            class="hidden h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div class="hidden shadow-xl" id="mobile-menu">
+        <ul class="space-y-2 px-4 pb-3 pt-2">
+          <li class="h-full w-full">
+            <div
+              class="flex items-center w-full justify-between gap-1.5 x-dropdown-button cursor-pointer"
+              data-target="menu1"
+            >
+              <span class="font-semibold">Tentang Kami</span>
+              <i class="bi bi-chevron-down transition-all"></i>
+            </div>
+            <div class="hidden x-dropdown-menu" id="menu1">
+              <div>
+                <ul class="bg-white text-nowrap px-3 rounded-xl">
+                  <li>
+                    <a href="sejarah.html" class="w-full block pl-2 pr-8 py-1"
+                      >Sejarah</a
+                    >
+                  </li>
+                  <li>
+                    <a href="visimisi.html" class="w-full block pl-2 pr-8 py-1"
+                      >Visi & Misi</a
+                    >
+                  </li>
+                  <li>
+                    <a href="sambutan.html" class="w-full block pl-2 pr-8 py-1"
+                      >Sambutan Rektor</a
+                    >
+                  </li>
+                  <li>
+                    <a href="fasilitas.html" class="w-full block pl-2 pr-8 py-1"
+                      >Fasilitas</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="sdm.html" class="font-semibold">SDM</a>
+          </li>
+          <li class="h-full w-full">
+            <div
+              class="flex items-center w-full justify-between gap-1.5 x-dropdown-button cursor-pointer"
+              data-target="menu2"
+            >
+              <span class="font-semibold">Akademik</span>
+              <i class="bi bi-chevron-down transition-all"></i>
+            </div>
+            <div class="hidden w-full x-dropdown-menu mt-4" id="menu2">
+              <div class="space-y-4">
+                <div class="pl-3">
+                  <span
+                    class="flex justify-between mb-3 font-semibold text-nowrap x-dropdown-button"
+                    data-target="menu-ilmu-kesehatan"
+                    >ILMU KESEHATAN
+                    <i class="bi bi-chevron-down transition-all"></i
+                  ></span>
+                  <ul
+                    id="menu-ilmu-kesehatan"
+                    class="hidden x-dropdown-menu space-y-1 text-nowrap"
+                  >
+                    <li>
+                      <a href="#" class="w-full block pl-2 pr-8 py-1"
+                        >S1 KEPERAWATAN</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="w-full block pl-2 pr-8 py-1"
+                        >S1 KEBIDANAN</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="w-full block pl-2 pr-8 py-1"
+                        >S1 FARMASI</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="w-full block pl-2 pr-8 py-1"
+                        >S1 ADMINISTRASI RUMAH SAKIT</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="w-full block pl-2 pr-8 py-1"
+                        >D3 KEBIDANAN</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="w-full block pl-2 pr-8 py-1"
+                        >D3 FISIOTERAPI</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="w-full block pl-2 pr-8 py-1"
+                        >D3 FARMASI</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="pl-3">
+                  <span
+                    class="flex justify-between mb-3 font-semibold text-nowrap x-dropdown-button"
+                    data-target="menu-ekonomi-bisnis"
+                    >EKONOMI DAN BISNIS
+                    <i class="bi bi-chevron-down transition-all"></i
+                  ></span>
+                  <ul
+                    id="menu-ekonomi-bisnis"
+                    class="x-dropdown-menu hidden space-y-1 text-nowrap"
+                  >
+                    <li>
+                      <a href="#" class="w-full block pl-2 pr-8 py-1"
+                        >S1 MANAJEMEN</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="w-full block pl-2 pr-8 py-1"
+                        >S1 AKUNTANSI</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="w-full block pl-2 pr-8 py-1"
+                        >S1 EKONOMI SYARIAH</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="w-full block pl-2 pr-8 py-1"
+                        >S1 KEWIRAUSAHAAN</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="pl-3">
+                  <span
+                    class="flex justify-between mb-3 font-semibold text-nowrap x-dropdown-button"
+                    data-target="menu-saintekdik"
+                    >SAINS, TEKNOLOGI, DAN PENDIDIKAN
+                    <i class="bi bi-chevron-down transition-all"></i
+                  ></span>
+                  <ul
+                    id="menu-saintekdik"
+                    class="x-dropdown-menu hidden text-nowrap space-y-1"
+                  >
+                    <li>
+                      <a href="#" class="w-full block pl-2 pr-8 py-1"
+                        >S1 PENDIDIKAN GURU SD</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="w-full block pl-2 pr-8 py-1"
+                        >S1 BIOLOGI</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="w-full block pl-2 pr-8 py-1"
+                        >S1 FISIKA</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="w-full block pl-2 pr-8 py-1"
+                        >S1 TEKNIK KOMPUTER</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="w-full block pl-2 pr-8 py-1"
+                        >S1 TEKNIK INDUSTRI</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="w-full block pl-2 pr-8 py-1"
+                        >S1 TEKNIK INFORMATIKA</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="pengumuman.html" class="font-semibold">Pengumuman</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- END OF NAVIGATION -->
+
+    <!-- HERO SECTION -->
+    <section class="container min-h-[90vh] relative mt-28">
+      <div
+        id="hero-1"
+        class="absolute animate-fade top-0 left-0 w-full h-full flex flex-col lg:flex-row lg:portrait:flex-col items-center justify-center rounded-[30px]"
+      >
+        <div class="px-4 md:pl-12 w-full lg:w-1/2 lg:portrait:w-full">
+          <h1
+            class="text-4xl font-semibold font-montserrat md:text-5xl/[60px] text-white mb-7"
+          >
+            Menyatukan Ilmu dan Iman untuk Masa Depan Cerah
+          </h1>
+          <span
+            class="text-lg md:text-xl text-white font-montserrat font-medium"
+            >Kami berkomitmen mendidik generasi unggul yang menjunjung tinggi
+            nilai agama dan kecemerlangan akademik.</span
+          >
+        </div>
+        <img
+          src="../assets/images/hero-illustration-1.png"
+          class="mr-12 sm:-mr-12 z-0 w-full lg:w-1/2 lg:portrait:w-4/5"
+          alt="Hero Image"
+        />
+      </div>
+      <div
+        id="hero-2"
+        class="absolute top-0 animate-fade left-0 w-full h-full flex flex-col lg:flex-row lg:portrait:flex-col items-center justify-center rounded-[30px]"
+      >
+        <div class="px-4 md:pl-12 w-full lg:w-1/2 lg:portrait:w-full">
+          <h1
+            class="text-4xl font-semibold font-montserrat md:text-5xl/[60px] text-white mb-7"
+          >
+            Menuju Pendidikan Berdaya Saing Global
+          </h1>
+          <span
+            class="text-lg md:text-xl text-white font-montserrat font-medium"
+            >Teknik pembelajaran yang memadukan tradisi keilmuan Agama dengan
+            inovasi modern.</span
+          >
+        </div>
+        <img
+          src="../assets/images/hero-illustration-2.png"
+          class="mr-12 sm:-mr-12 z-0 w-full lg:w-1/2 lg:portrait:w-4/5"
+          alt="Hero Image"
+        />
+      </div>
+      <div
+        id="hero-3"
+        class="absolute animate-fade top-0 left-0 w-full h-full flex flex-col lg:flex-row lg:portrait:flex-col items-center justify-center rounded-[30px]"
+      >
+        <div class="px-4 md:pl-12 w-full lg:w-1/2 lg:portrait:w-full">
+          <h1
+            class="text-4xl font-semibold font-montserrat md:text-5xl/[60px] text-white mb-7"
+          >
+            Menciptakan Generasi Berakhlak dan Berwawasan
+          </h1>
+          <span
+            class="text-lg md:text-xl text-white font-montserrat font-medium"
+            >Kami hadir untuk membimbing Anda dalam meraih prestasi akademik dan
+            menjadi agen perubahan di dunia.</span
+          >
+        </div>
+        <img
+          src="../assets/images/hero-illustration-3.png"
+          class="mr-12 sm:-mr-12 z-0 w-full lg:w-1/2 lg:portrait:w-4/5"
+          alt="Hero Image"
+        />
+      </div>
+    </section>
+
+    <div
+      class="container overflow-hidden w-fit md:px-16 py-5 rounded-3xl mx-4 sm:mx-auto -mt-32 bg-white z-10 relative shadow-2xl"
+    >
+      <h3
+        class="text-xl sm:text-2xl text-center w-full font-semibold font-montserrat mb-4"
+      >
+        Bekerjasama Dengan
+      </h3>
+      <div class="flex overflow-x-auto gap-16">
+        <img
+          class="w-12 md:w-fit"
+          src="/assets/images/nus.png"
+          alt="National University of Singapore"
+        />
+        <img
+          class="w-12 md:w-fit"
+          src="/assets/images/ntu.png"
+          alt="Nanyang Technological University"
+        />
+        <img
+          class="w-12 md:w-fit"
+          src="/assets/images/mit.png"
+          alt="Massachusetts Institute of Technology"
+        />
+        <img
+          class="w-12 md:w-fit"
+          src="/assets/images/TIT.png"
+          alt="Tokyo Institute of Technology"
+        />
+        <img
+          class="w-12 md:w-fit"
+          src="/assets/images/Waseda.png"
+          alt="Waseda University"
+        />
+        <img
+          class="w-12 md:w-fit"
+          src="/assets/images/Tokyo-Daigaku.png"
+          alt="The University of Tokyo"
+        />
+      </div>
+    </div>
+
+    <!-- END OF HERO SECTION -->
+
+    <!-- ABOUT SECTION -->
+    <section class="w-full overflow-hidden py-28">
+      <div
+        class="container grid grid-cols-1 md:grid-cols-2 items-center gap-12"
+      >
+        <div class="space-y-4 lg:ml-20">
+          <h3
+            class="text-primary-200 font-bold text-xl sm:text-2xl font-montserrat"
+          >
+            TENTANG KAMI
+          </h3>
+          <p class="font-montserrat text-2xl sm:text-4xl font-semibold">
+            Membangun generasi
+            <span class="text-secondary-purple">unggul</span> dan
+            <span class="text-secondary-pink">berakhlak</span>
+          </p>
+          <p
+            class="text-base sm:text-lg font-semibold text-xneutral-200 font-montserrat"
+          >
+            Universitas yang berfokus pada integritas, ilmu pengetahuan, dan
+            pengembangan karakter untuk membentuk pemimpin masa depan.
+          </p>
+          <a
+            href="#"
+            class="px-6 py-[14px] font-montserrat text-neutral-0 bg-white border w-fit text-lg font-semibold border-primary-200 text-primary-200 rounded-full flex gap-[10px]"
+            ><span>Tentang kami</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+        <div class="relative">
+          <div class="grid grid-cols-2 gap-6 w-fit">
+            <img src="/assets/images/about-1.png" alt="Illustration 1" />
+            <img src="/assets/images/about-2.png" alt="Illustration 2" />
+            <img
+              class="col-span-2"
+              src="/assets/images/about-3.png"
+              alt="Illustration 3"
+            />
+          </div>
+          <img
+            class="absolute -bottom-32 -left-36 -z-10"
+            src="/assets/images/elipse-1.svg"
+            alt=""
+          />
+          <img
+            class="absolute -top-24 -right-16 -z-10"
+            src="/assets/images/elipse-2.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <!-- END OF ABOUT SECTION -->
+
+    <!-- NEWS SECTION -->
+    <section class="container relative">
+      <div class="mb-10 flex justify-between items-center">
+        <div>
+          <h3
+            class="font-semibold text-xl sm:text-2xl font-montserrat text-xneutral-400"
+          >
+            Berita terkini untuk Anda
+          </h3>
+          <p
+            class="text-sm sm:text-base font-montserrat text-xneutral-200 font-semibold"
+          >
+            Temukan berita terbaru hari ini
+          </p>
+        </div>
+        <div>
+          <button
+            class="text-xneutral-400 hover:text-xneutral-0 bg-xneutral-0 transition-all hover:bg-xneutral-400 w-10 h-10 rounded-full"
+          >
+            <i class="bi bi-arrow-left-short text-4xl"></i>
+          </button>
+          <button
+            class="text-xneutral-400 hover:text-xneutral-0 bg-xneutral-0 transition-all hover:bg-xneutral-400 w-10 h-10 rounded-full"
+          >
+            <i class="bi bi-arrow-right-short text-4xl"></i>
+          </button>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div
+          class="p-[14px] rounded-[20px] border border-xneutral-100 bg-xneutral-0"
+        >
+          <div class="max-h-[214px] rounded-2xl overflow-hidden mb-5">
+            <img src="/assets/images/berita.png" alt="Berita 1" />
+          </div>
+          <a
+            href="berita.html"
+            class="text-base sm:text-lg font-montserrat font-semibold text-xneutral-400 line-clamp-2"
+          >
+            Alat Pemotong Adonan Kerupuk untuk UMKM J&R Dinoyo Malang
+          </a>
+          <p
+            class="font-montserrat text-xs sm:text-sm font-semibold text-xneutral-200"
+          >
+            20/08/24
+          </p>
+        </div>
+        <div
+          class="p-[14px] rounded-[20px] border border-xneutral-100 bg-white"
+        >
+          <div class="max-h-[214px] rounded-2xl overflow-hidden mb-5">
+            <img src="/assets/images/berita-1.png" alt="Berita 1" />
+          </div>
+          <a
+            href="berita.html"
+            class="text-base sm:text-lg font-montserrat font-semibold text-xneutral-400 line-clamp-2"
+          >
+            Himpunan Informatika (HMTI) gelar kuliah praktisi
+          </a>
+          <p
+            class="font-montserrat text-xs sm:text-sm font-semibold text-xneutral-200"
+          >
+            08/08/24
+          </p>
+        </div>
+        <div
+          class="p-[14px] rounded-[20px] border border-xneutral-100 bg-white"
+        >
+          <div class="max-h-[214px] rounded-2xl overflow-hidden mb-5">
+            <img src="/assets/images/berita-2.png" alt="Berita 1" />
+          </div>
+          <a
+            href="berita.html"
+            class="text-base sm:text-lg font-montserrat font-semibold text-xneutral-400 line-clamp-2"
+          >
+            Rapat Konsolidasi Pembentukan APSIMI (Asosiasi Program Studi
+            Informatika Medis Indonesia)
+          </a>
+          <p
+            class="font-montserrat text-xs sm:text-sm font-semibold text-xneutral-200"
+          >
+            20/07/24
+          </p>
+        </div>
+      </div>
+      <div class="absolute top-12 -left-24 -z-10">
+        <img src="/assets/images/elipse-1.svg" alt="" />
+      </div>
+    </section>
+    <!-- END OF NEWS SECTION -->
+
+    <!-- RECTOR SECTION -->
+    <section class="container mt-28">
+      <div class="text-center space-y-2">
+        <h3
+          class="font-montserrat font-semibold text-xneutral-400 text-xl sm:text-2xl"
+        >
+          Rektorat B-Universitas
+        </h3>
+        <p
+          class="font-montserrat text-sm sm:text-base font-semibold text-xneutral-200"
+        >
+          Berkomitmen untuk meningkatkan kualitas Pendidikan
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-12 lg:grid-cols-4 mt-11 text-center">
+        <div class="flex flex-col items-center">
+          <div class="rounded-full overflow-hidden w-fit mb-6">
+            <img src="/assets/images/orang-3.png" alt="Angga Setiawan" />
+          </div>
+          <p
+            class="mb-[2px] text-sm sm:text-base text-xneutral-400 font-semibold font-montserrat"
+          >
+            Angga Setiawan
+          </p>
+          <p
+            class="mb-[2px] text-xs sm:text-sm text-xneutral-200 font-semibold font-montserrat"
+          >
+            Rektor
+          </p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="rounded-full overflow-hidden w-fit mb-6">
+            <img src="/assets/images/orang-2.png" alt="Galih Pratama" />
+          </div>
+          <p
+            class="mb-[2px] text-sm sm:text-base text-xneutral-400 font-semibold font-montserrat"
+          >
+            Galih Pratama
+          </p>
+          <p
+            class="mb-[2px] text-xs sm:text-sm text-xneutral-200 font-semibold font-montserrat"
+          >
+            Wakil Rektor 1
+          </p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="rounded-full overflow-hidden w-fit mb-6">
+            <img
+              src="/assets/images/orang-5.png"
+              alt="Ahmad Hafidh Ayatullah"
+            />
+          </div>
+          <p
+            class="mb-[2px] text-sm sm:text-base text-xneutral-400 font-semibold font-montserrat"
+          >
+            Ahmad Hafidh Ayatullah
+          </p>
+          <p
+            class="mb-[2px] text-xs sm:text-sm text-xneutral-200 font-semibold font-montserrat"
+          >
+            Wakil Rektor 2
+          </p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="rounded-full overflow-hidden w-fit mb-6">
+            <img src="/assets/images/orang-4.png" alt="Della Reno Rinaldi" />
+          </div>
+          <p
+            class="mb-[2px] text-sm sm:text-base text-xneutral-400 font-semibold font-montserrat"
+          >
+            Della Reno Rinaldi
+          </p>
+          <p
+            class="mb-[2px] text-xs sm:text-sm text-xneutral-200 font-semibold font-montserrat"
+          >
+            Wakil Rektor 3
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- END OF RECTOR SECTION -->
+
+    <!-- ANNOUNCEMENT SECTION -->
+    <section class="mt-28 x-announcement w-full">
+      <div class="container pt-9 pb-16">
+        <div class="mb-10 flex justify-between items-center">
+          <div>
+            <h3
+              class="font-semibold text-xl sm:text-2xl font-montserrat text-xneutral-0"
+            >
+              Pengumuman
+            </h3>
+            <p
+              class="font-montserrat text-sm sm:text-base text-xneutral-0 font-semibold"
+            >
+              Dapatkan pengumuman terbaru
+            </p>
+          </div>
+          <div>
+            <button
+              class="text-xneutral-400 hover:text-xneutral-0 bg-xneutral-0 transition-all hover:bg-xneutral-400 w-10 h-10 rounded-full"
+            >
+              <i class="bi bi-arrow-left-short text-4xl"></i>
+            </button>
+            <button
+              class="text-xneutral-400 hover:text-xneutral-0 bg-xneutral-0 transition-all hover:bg-xneutral-400 w-10 h-10 rounded-full"
+            >
+              <i class="bi bi-arrow-right-short text-4xl"></i>
+            </button>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div
+            class="py-[26px] px-7 rounded-[20px] border border-xneutral-100 bg-white"
+          >
+            <a
+              href=""
+              class="text-base sm:text-lg font-montserrat font-semibold text-xneutral-400 line-clamp-2 mb-4"
+            >
+              Mahasiswa PKM-KC Alat Sensor Batuk Pasien TBC
+            </a>
+            <p
+              class="font-montserrat text-xs sm:text-sm font-semibold text-xneutral-200 mb-1.5"
+            >
+              Tingginya kasus TBC membuat mahasiswa membentuk tim Program....
+            </p>
+            <p class="font-montserrat text-xs font-semibold text-xneutral-200">
+              20/08/24
+            </p>
+          </div>
+          <div
+            class="py-[26px] px-7 rounded-[20px] border border-xneutral-100 bg-white"
+          >
+            <a
+              href=""
+              class="text-base sm:text-lg font-montserrat font-semibold text-xneutral-400 line-clamp-2 mb-4"
+            >
+              Green Idul Adha Dapat Apresiasi Majelis Lingkungan
+            </a>
+            <p
+              class="font-montserrat text-xs sm:text-sm font-semibold text-xneutral-200 mb-1.5"
+            >
+              Ada yang berbeda dari hari idul Adha 1444 Hijriah saat ini karena
+            </p>
+            <p class="font-montserrat text-xs font-semibold text-xneutral-200">
+              26/09/24
+            </p>
+          </div>
+          <div
+            class="py-[26px] px-7 rounded-[20px] border border-xneutral-100 bg-white"
+          >
+            <a
+              href=""
+              class="text-base sm:text-lg font-montserrat font-semibold text-xneutral-400 line-clamp-2 mb-4"
+            >
+              Prodi Informatika Pemenang Juara 1 Gemastik 2024
+            </a>
+            <p
+              class="font-montserrat text-xs sm:text-sm font-semibold text-xneutral-200 mb-1.5"
+            >
+              Mahasiswa informatika menang lomba Gemastik 2024 kategori Cyber
+              Security
+            </p>
+            <p class="font-montserrat text-xs font-semibold text-xneutral-200">
+              28/09/24
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END OF ANNOUNCEMENT SECTION -->
+
+    <!-- FOOTER SECTION -->
+    <footer class="w-full mt-14 pt-20">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 lg:gap-36 container"
+      >
+        <div>
+          <img
+            class="mb-10"
+            src="/assets/images/B-Uni.png"
+            alt="Logo B-Universitas"
+          />
+          <p class="text-medium text-xneutral-200 font-poppins text-sm mb-6">
+            Lihat Perkembangan kami diakun sosial media
+          </p>
+          <div class="flex items-center gap-11">
+            <a
+              href="#"
+              class="w-8 h-8 grid place-content-center rounded-full bg-primary-200"
+            >
+              <i class="bi bi-instagram text-lg text-xneutral-0"></i>
+            </a>
+            <a
+              href="#"
+              class="w-8 h-8 grid place-content-center rounded-full bg-primary-200"
+            >
+              <i class="bi bi-youtube text-lg text-xneutral-0"></i>
+            </a>
+            <a
+              href="#"
+              class="w-8 h-8 grid place-content-center rounded-full bg-primary-200"
+            >
+              <i class="bi bi-linkedin text-sm text-xneutral-0"></i>
+            </a>
+            <a
+              href="#"
+              class="w-8 h-8 grid place-content-center rounded-full bg-primary-200"
+            >
+              <i class="bi bi-facebook text-lg text-xneutral-0"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4
+            class="font-poppins font-semibold text-lg text-xneutral-300 mb-10"
+          >
+            Contact us
+          </h4>
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <i class="bi bi-geo-alt-fill text-xneutral-200"></i>
+              <p class="font-poppins text-xneutral-200 text-sm">
+                Jl. Teknik Kimia, Keputih, Kec. Sukolilo, Surabaya, Jawa Timur
+                60111
+              </p>
+            </div>
+            <div class="flex gap-4">
+              <i class="bi bi-envelope text-xneutral-200"></i>
+              <p class="font-poppins text-xneutral-200 text-sm">
+                admin@b-university.ac.id
+              </p>
+            </div>
+            <div class="flex gap-4">
+              <i class="bi bi-whatsapp text-xneutral-200"></i>
+              <p class="font-poppins text-xneutral-200 text-sm">
+                +62 878-7777-9999
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h4
+            class="font-poppins font-semibold text-lg text-xneutral-300 mb-10"
+          >
+            Contact us
+          </h4>
+          <div class="max-h-24">
+            <a href="{{ $datafooter->link_gmaps ?? 'null' }}" target="_blank" rel="noopener noreferrer">
+              <button class="px-6 py-[14px] text-center w-full font-montserrat text-neutral-0 bg-white border text-lg font-semibold border-primary-200 text-primary-200 rounded-full">
+                View GMaps
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <hr class="mt-14 border-2 border-xneutral-300" />
+        <p class="text-center my-6 font-poppins text-xneutral-200">
+          Copyright © 2024 | B University
+        </p>
+      </div>
+    </footer>
+    <!-- END OF FOOTER SECTION -->
+  </body>
+</html>

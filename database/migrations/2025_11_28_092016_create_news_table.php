@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('news', function (Blueprint $table) {
             $table->id();
             $table->string('title', 255);
+            $table->string('slug')->unique();
             $table->text('content');
             $table->text('image');
             $table->foreignId('users_id')->constrained('users')->onDelete('cascade');

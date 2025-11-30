@@ -49,7 +49,6 @@ class VisimisiResource extends Resource
                     ->searchable()
                     ->html(),
                 Tables\Columns\TextColumn::make('misi')
-                    ->limit(50)
                     ->searchable()
                     ->html(),
                 Tables\Columns\ImageColumn::make('image')
