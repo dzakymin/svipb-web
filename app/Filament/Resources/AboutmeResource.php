@@ -26,7 +26,8 @@ class AboutmeResource extends Resource
             ->schema([
                 TinyEditor::make('content')
                     ->required()
-                    ->columnSpanFull(),
+                    ->columnSpanFull()
+                    ->html(),
                 Forms\Components\FileUpload::make('image')
                     ->image()
                     ->multiple()

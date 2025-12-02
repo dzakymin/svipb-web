@@ -27,6 +27,12 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+                // --- Tambahkan baris ini ---
+            ->favicon(asset('images/LOGO_IPB.png')) 
+            // ---------------------------
+            
+            ->brandName('CMS Sekolah Vokasi IPB')
+            // ... kode lainnya
             ->colors([
                 'primary' => Color::Amber,
             ])
