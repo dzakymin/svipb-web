@@ -26,6 +26,10 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
+            ->colors([
+            // Gunakan kode Hex Navy Blue favoritmu (contoh: #1e1b4b)
+            'primary' => Color::hex('#1e1b4b'), 
+            ])
             ->login()
                 // --- Tambahkan baris ini ---
             ->favicon(asset('images/LOGO_IPB.png')) 

@@ -12,7 +12,11 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-
+// --- TAMBAHAN IMPORT UNTUK PDF ---
+use Filament\Tables\Actions\Action;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Database\Eloquent\Collection;
+// ---------------------------------
 
 class StudentResource extends Resource
 {
@@ -83,12 +87,47 @@ class StudentResource extends Resource
             ->filters([
                 //
             ])
+            // === 1. TOMBOL DOWNLOAD SEMUA DATA (DI ATAS TABEL) ===
+            ->headerActions([
+                Action::make('download_pdf')
+                    ->label('Download PDF')
+                    ->icon('heroicon-o-printer')
+                    ->color('success')
+                    ->action(function () {
+                        // Ambil semua data student
+                        $students = Student::all();
+                        
+                        // Load view pdf
+                        $pdf = Pdf::loadView('pdf.students', ['students' => $students]);
+                        
+                        // Download
+                        return response()->streamDownload(function () use ($pdf) {
+                            echo $pdf->output();
+                        }, 'laporan-semua-student.pdf');
+                    }),
+            ])
+            // =====================================================
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
+                    
+                    // === 2. TOMBOL DOWNLOAD DATA TERPILIH (BULK) ===
+                    Tables\Actions\BulkAction::make('export_pdf_selected')
+                        ->label('Download PDF Terpilih')
+                        ->icon('heroicon-o-document-arrow-down')
+                        ->action(function (Collection $records) {
+                            // $records berisi data yang diceklis
+                            $pdf = Pdf::loadView('pdf.students', ['students' => $records]);
+
+                            return response()->streamDownload(function () use ($pdf) {
+                                echo $pdf->output();
+                            }, 'laporan-student-terpilih.pdf');
+                        })
+                        ->deselectRecordsAfterCompletion()
+                    // ===============================================
                 ]),
             ]);
     }
