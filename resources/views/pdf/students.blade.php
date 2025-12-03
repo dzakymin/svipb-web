@@ -12,14 +12,16 @@
     </style>
 </head>
 <body>
-    <h2>Laporan Data Mahasiswa Baru</h2>
+    <h2>Laporan Data Pendaftar SV IPB</h2>
     <table>
         <thead>
             <tr>
                 <th>No</th>
                 <th>Nama Lengkap</th>
+                <th>Email</th>
                 <th>Jalur</th>
                 <th>Prodi 1</th>
+                <th>Prodi 2</th>
                 <th>No HP</th>
             </tr>
         </thead>
@@ -28,8 +30,10 @@
             <tr>
                 <td>{{ $index + 1 }}</td>
                 <td>{{ $student->nama_lengkap }}</td>
+                <td>{{ $student->email }}</td>
                 <td>{{ $student->jalur }}</td>
-                <td>{{ $student->program_studi_1 }}</td>
+                <td>{{ $student->programstudi_1 }}</td>
+                <td>{{ $student->programstudi_2 }}</td>
                 <td>{{ $student->nomor_hp }}</td>
             </tr>
             @endforeach
